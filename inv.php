@@ -25,7 +25,7 @@ if (!$query) {
 		    <thead>
 		    	<tr>
 		    		<th>Serial Number</th>
-		    		<th>Manifacturer Name</th>
+		    		<th>Manufacturer Name</th>
 		    		<th>Modle Name</th>
 		    		<th>Count</th>
 		    		<th>Sold Button</th>
