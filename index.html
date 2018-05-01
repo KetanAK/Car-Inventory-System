@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Car Inventory System</title>
+		<style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: #000;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+			
+			li a.active {
+                background-color: #F90101;
+                color: white;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+            }
+			marquee tr td {
+			    font-size: 50px;
+			}
+			
+			td {
+			    font-size: 50px;
+			}
+			
+			iframe:focus { 
+                outline: none;
+            }
+
+            iframe[seamless] { 
+                display: block;
+            }
+        </style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+</script>
+    <body>
+	    <marquee scrollamount="20" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"><table><tr><td>WELCOME TO CIS</td></tr><tr><td><img height="138" width="430" src="http://localhost/images/car-03-soul-red.png" /></td></tr></table></marquee>
+		<table align="center"><tr><td>Car Inventory System</td></tr></table>
+	    <ul>
+		    <li><a class="active" onclick="myframe.location.href='http://localhost/inv.php'"><b>Inventory</b></a></li>
+            <li><a onclick="myframe.location.href='http://localhost/ADD_Manufacturer.html'"><b>Add Manufacturer</b></a></li>
+            <li><a onclick="myframe.location.href='http://localhost/Add_Cars.php'"><b>Add Car</b></a></li>
+		<script>
+		    $('a').on("click",function(){  
+                $('a').not(this).removeClass();
+                $(this).toggleClass('active'); 
+            });
+		</script>
+        </ul>
+		<div align="middle">
+		    <iframe src="http://localhost/inv.php" name="myframe" frameborder="0" scrolling="no" onload="resizeIframe(this)" style="overflow: hidden; height: 70%; width: 30%;"></iframe>
+		</div>
+	</body>
+</html>
