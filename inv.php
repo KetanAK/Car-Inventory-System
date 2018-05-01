@@ -1,6 +1,5 @@
 <?php
 include 'DB_Connect.php';
-
 $conn = OpenCon();
 if (!$conn) {
 	die ('Failed to connect to MySQL: ' . mysqli_connect_error());	
